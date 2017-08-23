@@ -40,7 +40,7 @@ public class HomeController {
             return "addStudent";
         }
         studentRepository.save(student);
-        return "redirect:/listStudent";
+        return "dispStudent";
     }
     @RequestMapping("/update/{id}")
     public String updateCourse(@PathVariable("id") long id, Model model){

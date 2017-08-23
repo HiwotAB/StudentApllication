@@ -50,48 +50,55 @@
         <!--<a class="hero-brand" href="homePage.html" title="Home"><img alt="Student Logo" src="img/reg.png"></a>-->
         <!--</div>-->
         <!--</div>-->
-        <form class="form-horizontal" th:action="@{/dispStudents}" th:object="${student}" method="">
-            <div class="form-group">
-                <label class="control-label col-sm-2">First Name</label>
-                <p th:text="${student.firstname}" />
-            </div>
+        <form class="form-horizontal" th:action="@{/addStudent}" th:object="${student}" method="post">
+        <div class="form-group">
+            <label class="control-label col-sm-2">First Name</label>
+            <div class="col-sm-10">
 
-            <div class="form-group">
-                <label class="control-label col-sm-2">Last Name</label>
-                <div class="col-sm-10">
-                    <p th:text="${student.lastname}" />
-                </div>
+                <p th:text="${newUser.firstname}" />
             </div>
+        </div>
 
-            <div class="form-group">
-                <label class="control-label col-sm-2" >E-Mail</label>
-                <div class="col-sm-10">
-                    <p th:text="${student.email}" />
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="control-label col-sm-2">Phone</label>
-                <div class="col-sm-10">
-                    <p th:text="${student.phone}" />
-                </div>
-            </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">Last Name</label>
+            <div class="col-sm-10">
 
-            <div class="form-group">
-                <label class="control-label col-sm-2">School Name</label>
-                <div class="col-sm-10">
-                    <p th:text="${student.schoolName}" />
-
-                </div>
+                <p th:text="${newUser.lastname}" />
             </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2" >E-Mail</label>
+            <div class="col-sm-10">
+
+                <p th:text="${newUser.email}" />
+
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2">Phone</label>
+            <div class="col-sm-10">
+
+                <p th:text="${newUser.phone}" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-2">School Name</label>
+            <div class="col-sm-10">
+
+                <p th:text="${newUser.schoolName}" />
+            </div>
+        </div>
 
             <div class="form-group">
                 <div class="col-md-4">
-                    <p><a href="addStudent"><strong>Enter More Student Information</strong></a></p>
-                    <p><a th:href="@{/update/{id}(id=${student.id})}">Update</a></p>
+                    <p><a href="listUserInfo"><strong>Enter more student information</strong></a></p>
 
                 </div>
             </div>
         </form>
+
     </div>
 
 </section>
