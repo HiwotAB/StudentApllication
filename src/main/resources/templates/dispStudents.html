@@ -26,13 +26,13 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,700|Roboto:400,900" rel="stylesheet">
 
     <!-- Bootstrap CSS File -->
-    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Libraries CSS Files -->
-    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../../lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- Main Stylesheet File -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="../../css/style.css" rel="stylesheet">
 
     <!-- =======================================================
       Theme Name: Bell
@@ -45,50 +45,53 @@
 
 <section class="hero">
     <div class="container text-center">
-<form class="form-horizontal" th:action="@{/dispStudent}" th:object="${student}" method="">
-    <div class="form-group">
-        <label class="control-label col-sm-2">First Name</label>
-        <div class="col-sm-10">
-            <p th:text="${student.firstname}" />
-        </div>
-    </div>
+        <!--<div class="row">-->
+        <!--<div class="col-md-12">-->
+        <!--<a class="hero-brand" href="homePage.html" title="Home"><img alt="Student Logo" src="img/reg.png"></a>-->
+        <!--</div>-->
+        <!--</div>-->
+        <form class="form-horizontal" th:action="@{/dispStudents}" th:object="${student}" method="">
+            <div class="form-group">
+                <label class="control-label col-sm-2">First Name</label>
+                <p th:text="${student.firstname}" />
+            </div>
 
-    <div class="form-group">
-        <label class="control-label col-sm-2">Last Name</label>
-        <div class="col-sm-10">
-            <p th:text="${student.lastname}" />
-        </div>
-    </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2">Last Name</label>
+                <div class="col-sm-10">
+                    <p th:text="${student.lastname}" />
+                </div>
+            </div>
 
-    <div class="form-group">
-        <label class="control-label col-sm-2" >E-Mail</label>
-        <div class="col-sm-10">
-            <p th:text="${student.email}" />
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="control-label col-sm-2">Phone</label>
-        <div class="col-sm-10">
-            <p th:text="${student.phone}" />
-        </div>
-    </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" >E-Mail</label>
+                <div class="col-sm-10">
+                    <p th:text="${student.email}" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2">Phone</label>
+                <div class="col-sm-10">
+                    <p th:text="${student.phone}" />
+                </div>
+            </div>
 
-    <div class="form-group">
-        <label class="control-label col-sm-2">School Name</label>
-        <div class="col-sm-10">
-            <p th:text="${student.schoolName}" />
+            <div class="form-group">
+                <label class="control-label col-sm-2">School Name</label>
+                <div class="col-sm-10">
+                    <p th:text="${student.schoolName}" />
 
-        </div>
-    </div>
+                </div>
+            </div>
 
-    <div class="form-group">
-        <div class="col-md-4">
-            <p><a href="addStudent"><strong>Enter More Student Information</strong></a></p>
-            <p><a th:href="@{/update/{id}(id=${student.id})}">Update</a></p>
+            <div class="form-group">
+                <div class="col-md-4">
+                    <p><a href="addStudent"><strong>Enter More Student Information</strong></a></p>
+                    <p><a th:href="@{/update/{id}(id=${student.id})}">Update</a></p>
 
-        </div>
-    </div>
-</form>
+                </div>
+            </div>
+        </form>
     </div>
 
 </section>
@@ -115,6 +118,10 @@
 
     </div>
 </header>
+<!-- #header -->
+
+
+
 <!-- #header -->
 
 
